@@ -1,8 +1,32 @@
-<!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>Privacy Policy - Ed-os-v3</title></head>
-<body style="font-family:sans-serif;max-width:800px;margin:40px auto;padding:20px">
-<h1>Privacy Policy</h1>
-<p>Last updated: 2 Nov 2026</p>
-<p>Ed-os-v3 does not collect personal data without consent. Data is used only to provide and improve the app.</p>
-<p>Contact: mariamagdalenamanuhutu.collab@gmail.com</p>
-</body></html>
+# Copilot Instructions for Ed-os-v3
+
+## Priority
+- Always avoid exposing PII, device identifiers, location coordinates, IP addresses, or internal engineering labels in public files.
+- Treat privacy-policy.html as a public document. It must not contain sensitive data or debug metadata.
+- Favor non-identifying placeholders like [PUBLIC_REDACTED], [SUPPORT_CONTACT_REDACTED], [PRIVATE_IP_REDACTED].
+
+## Required behavior
+- Do not add raw names, phone numbers, emails, IDs, GPS coordinates, IPs, IMEI, UUIDs, or tokens to public docs.
+- Do not add operational labels like "Soul", "Vault", "ACTIVE GREEN", "master_live_engine", "L23 G0", or internal runtime names into public-facing files.
+- If a privacy policy or public-facing metadata is needed, keep it generic, compliant, and neutral.
+- If you are asked to generate compliance text, include:
+  - UU PDP No. 27 Tahun 2022 reference
+  - data deletion / access rights statement
+  - contact section
+  - retention summary
+  - no third-party tracking claim if it is not verified
+
+## Forbidden patterns
+- exact geolocation
+- private network IPs
+- internal debug labels
+- device ID leakage
+- public-facing support email with real personal address
+- raw code names or runtime identifiers
+
+## Safe patterns
+- [COORDINATES_REDACTED]
+- [PRIVATE_IP_REDACTED]
+- [SUPPORT_CONTACT_REDACTED]
+- [PUBLIC_REDACTED]
+- [DEVICE_ID_HASHED]
